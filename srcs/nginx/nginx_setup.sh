@@ -7,6 +7,6 @@ mv localhost-nginx.key /etc/nginx/ssl
 mv localhost-nginx.crt /etc/nginx/ssl
 
 mkdir -p /run/nginx
-echo "<h1>THIS IS FT_SERVICES NGINX INDEX.HTML</h1>" >> /var/www/index.html
+echo "<h1>THIS IS FT_SERVICES NGINX INDEX.HTML BY HONLEE</h1>" >> /var/www/index.html
 
 /usr/sbin/nginx -g "daemon off;"

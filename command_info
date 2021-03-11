@@ -1,0 +1,7 @@
+kubectl get pod
+kubectl describe service nginx-service
+kubectl get pod -o wide
+kubectl logs [pod-name]
+
+kubectl exec -it [pod name] -- bin/bash
+nginx -s reload -c /conf/nginx/nginx.conf

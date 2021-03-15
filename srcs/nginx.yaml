@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: nginx      #서비스가 찾아낼때 이름
-  strategy:            # pod 교체 전략, 따로 입력 안해주면 기본 rollingUpdate 전략이 됨.
+  strategy:            # pod 교체 전략, 따로 입력 안해주면 기본 rollingUpdate 전략이 됨. 사실 이부분 없어도 상관없다.
     rollingUpdate:        # 파드를 하나씩 죽이고 새로띄우면서 순차적으로 교체하는 방법
       maxSurge: 25%         # 롤링 업데이트시 동시에 생성될 수 있는 파드의 최대 개수
       maxUnavailable: 25%   # 롤링 업데이트시 동시에 삭제 할 수 있는 파드의 최대 개수

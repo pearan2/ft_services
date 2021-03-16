@@ -22,6 +22,12 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 5050
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            timeoutSeconds: 5
+            tcpSocket:
+              port: 5050
 ---
 #Service part
 apiVersion: v1

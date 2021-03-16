@@ -21,10 +21,10 @@ kubectl apply -f ./srcs/metallb.yaml
 
 
 # 디플로이먼트와 서비스 어플라이
-kubectl apply -f ./srcs/nginx.yaml
 kubectl apply -f ./srcs/mysql.yaml
-kubectl apply -f ./srcs/wordpress.yaml
+kubectl apply -f ./srcs/nginx.yaml
 kubectl apply -f ./srcs/phpmyadmin.yaml
 kubectl apply -f ./srcs/ftps.yaml
+kubectl apply -f ./srcs/wordpress.yaml
 #echo "대쉬보드를 실행합니다."
 #minikube dashboard > /dev/null

@@ -19,6 +19,12 @@ spec:
       - image: honlee_phpmyadmin
         imagePullPolicy: Never
         name: phpmyadmin
+        livenessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 10
+          timeoutSeconds: 5
+          tcpSocket:
+            port: 5000
 ---
 #Service part
 apiVersion: v1

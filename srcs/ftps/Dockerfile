@@ -8,4 +8,4 @@ RUN chmod +x /ftps_setup.sh
 
 EXPOSE 21
 
-ENTRYPOINT ["./ftps_setup.sh"]
+ENTRYPOINT ["sh","/ftps_setup.sh"]

@@ -18,3 +18,8 @@ alpine:3.12.0
 
 minikube dashboard
 
+프로세스 킬
+kubectl exec deploy/nginx -- pkill php-fpm7
+
+nginx reload
+nginx -s reload -c /conf/nginx/nginx.conf

@@ -9,7 +9,7 @@ RUN apk update \
 
 COPY influxdb.yaml /usr/share/grafana/conf/provisioning/datasources/
 COPY dashboards.yaml /usr/share/grafana/conf/provisioning/dashboards/
-COPY dashboards /var/lib/grafana/dashboards/
+COPY dashboards/* /var/lib/grafana/dashboards/
 
 EXPOSE 3000
 

@@ -19,7 +19,7 @@ spec:
       - image: honlee_phpmyadmin
         imagePullPolicy: Never
         name: phpmyadmin
-        port:
+        ports:
           - containerPort: 5000
         livenessProbe:
           exec:

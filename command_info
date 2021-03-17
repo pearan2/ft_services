@@ -6,7 +6,6 @@ kubectl logs [pod-name]
 위 명령어로 로그뽑아도 아무것도 안보일때
 kubectl describe pod [pod-name]
 
-
 kubectl exec -it [pod name] -- bin/bash
 nginx -s reload -c /conf/nginx/nginx.conf
 

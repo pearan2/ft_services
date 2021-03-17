@@ -12,6 +12,7 @@ RUN	mkdir -p /run/mysqld
 COPY ./my.cnf /etc/.
 COPY ./mysql_init.sql /mysql_init.sql 
 COPY ./mysql_setup.sh /mysql_setup.sh
+COPY ./wordpress.sql /wordrpess.sql
 
 RUN chmod +x /mysql_setup.sh
 

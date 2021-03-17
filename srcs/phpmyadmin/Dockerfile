@@ -11,11 +11,13 @@ RUN mkdir -p /run/nginx
 RUN	mkdir /etc/phpmyadmin/tmp
 RUN	chmod 777 /etc/phpmyadmin/tmp
 
+######### php-fpm health check part #########
 RUN wget -O /usr/local/bin/php-fpm-healthcheck \
 			https://raw.githubusercontent.com/renatomefi/php-fpm-healthcheck/master/php-fpm-healthcheck
 
 RUN chmod +x /usr/local/bin/php-fpm-healthcheck
 RUN echo "pm.status_path = /status" >> /etc/php7/php-fpm.d/www.conf
+#############################################
 
 COPY config.inc.php /etc/phpmyadmin
 COPY ./nginx.conf /etc/nginx/.

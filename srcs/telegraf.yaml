@@ -42,7 +42,7 @@ metadata:
   name: telegraf
   labels:
     app: telegraf
-data:
+data:     #telegraf.conf 파일을 이렇게 쓴다. 원본에서 바꾼것은 influxdb 접속 user/pass 밖에없음.
   telegraf.conf: |
     [global_tags]
     [agent]

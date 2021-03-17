@@ -1,3 +1,4 @@
+#alpine:latest 로 할 경우 클러스터맥에서는 에러가 난다.
 FROM alpine:3.12.0
 
 # install required packages

@@ -37,11 +37,11 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 192.168.99.100  #아이피 주소 잡아줌.
   ports:
-    - port: 21
+    - port: 21    #연결을 수립하고 요청을 주고받는 포트
       name: ftps
       targetPort: 21
       protocol: TCP
-    - port: 30021
+    - port: 30021     #실제 데이터가 오고가는 포트
       name: ftps-pasv
       targetPort: 30021
       protocol: TCP

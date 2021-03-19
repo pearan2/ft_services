@@ -24,10 +24,12 @@ RUN	mv wordpress/ /var/www/
 RUN mkdir -p /run/nginx
 COPY wp-config.php /var/www/wordpress/
 COPY default.conf /etc/nginx/conf.d/
-#COPY wordpress.sql /run/nginx/wordpress.sql
-COPY wordpress_setup.sh /
-RUN chmod +x wordpress_setup.sh
+COPY wordpress.sql /wordpress.sql
+COPY wordpress_setup.sh /wordpress_setup.sh
+RUN chmod +x /wordpress_setup.sh
 
 EXPOSE 5050
 
-CMD php-fpm7 && nginx -g "daemon off;"
+#CMD php-fpm7 && nginx -g "daemon off;"
+
+CMD /bin/sh "/wordpress_setup.sh" && php-fpm7 && nginx -g "daemon off;"
